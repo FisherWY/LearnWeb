@@ -1,5 +1,16 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
+<%
+	String username = "";
+	Cookie[] cookies = request.getCookies();
+	if (cookies != null) {
+		for (int i=0; i<cookies.length; i++) {
+			if ("username".equals(cookies[i].getName())) {
+				username = cookies[i].getValue();
+			}
+		}
+	}
+%>
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
@@ -12,7 +23,7 @@
 			<table>
 				<tr>
 					<td class="tdx">用户名：</td>
-					<td><input type="text" name="username"/></td>
+					<td><input type="text" name="username" value="<%=username%>"/></td>
 				</tr>
 				<tr>
 					<td class="tdx">密&nbsp;&nbsp; 码：</td>
@@ -20,8 +31,8 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="checkbox" name="remname" value="true"/>记住用户名
-						<input type="checkbox" name="autologin" value="true"/>30天内自动登陆
+						<input type="checkbox" name="remname" checked/>记住用户名
+						<input type="checkbox" name="autologin"/>30天内自动登陆
 					</td>
 				</tr>
 				<tr>

@@ -6,6 +6,7 @@ import preference.config;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -53,7 +54,15 @@ public class login extends HttpServlet {
         req.setCharacterEncoding(config.ENCODE);
         String username = req.getParameter("username");
         String psw = req.getParameter("password");
+        String checked = req.getParameter("remname");
         User user = new User(username,psw,null,null,null);
+
+        // 记住用户名
+        if ("on".equals(checked)) {
+            Cookie usernameCookie = new Cookie("username", username);
+            usernameCookie.setMaxAge(10000);
+            resp.addCookie(usernameCookie);
+        }
 
         if (db.select(user.getUsername())) {
             ResultSet res = db.getResult();

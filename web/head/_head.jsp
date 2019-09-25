@@ -23,7 +23,7 @@
 		<div id="content">
 			<ul>
 				<li><a href="#">首页</a></li>
-				<li><a href="#">全部商品</a></li>
+				<li><a href="../prodlist/prod_list.jsp">全部商品</a></li>
 				<li><a href="#">手机数码</a></li>
 				<li><a href="#">电脑平板</a></li>
 				<li><a href="#">家用电器</a></li>

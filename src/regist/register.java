@@ -56,7 +56,7 @@ public class register extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         // 重复提交监测
-        String token1 = (String) req.getSession().getAttribute("token");
+        String token1 = String.valueOf(req.getSession().getAttribute("token"));
         String token2 = req.getParameter("token");
         if (token1==null || token2==null || !token1.equals(token2)) {
             throw new RuntimeException("重复提交错误");
@@ -71,8 +71,8 @@ public class register extends HttpServlet {
         psw1 = req.getParameter("password2");
         nickname = req.getParameter("nickname");
         email = req.getParameter("email");
-        verifycode = req.getParameter("valistr");
-        verifycode1 = (String) req.getSession().getAttribute("verifyCode");
+        verifycode = req.getParameter("valistr").toLowerCase();
+        verifycode1 = String.valueOf(req.getSession().getAttribute("verifyCode")).toLowerCase();
 
         // 回显页面
         resp.setCharacterEncoding(config.ENCODE);

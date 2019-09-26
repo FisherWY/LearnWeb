@@ -1,6 +1,7 @@
 package regist;
 
 import dao.CRUD;
+import model.RegistUser;
 import preference.config;
 
 import javax.servlet.ServletException;
@@ -21,13 +22,7 @@ import java.sql.SQLException;
 @WebServlet("/register")
 public class register extends HttpServlet {
 
-    private String username;
-    private String psw;
-    private String psw1;
-    private String nickname;
-    private String email;
-    private String verifycode;
-    private String verifycode1;
+    private RegistUser user = new RegistUser();
     private boolean valid = true;
 
     private CRUD db = new CRUD();
@@ -66,13 +61,13 @@ public class register extends HttpServlet {
 
         // 获取Post的参数
         req.setCharacterEncoding("UTF-8");
-        username = req.getParameter("username");
-        psw = req.getParameter("password");
-        psw1 = req.getParameter("password2");
-        nickname = req.getParameter("nickname");
-        email = req.getParameter("email");
-        verifycode = req.getParameter("valistr").toLowerCase();
-        verifycode1 = String.valueOf(req.getSession().getAttribute("verifyCode")).toLowerCase();
+        user.setUsername(req.getParameter("username"));
+        user.setPsw(req.getParameter("password"));
+        user.setPsw1(req.getParameter("password2"));
+        user.setNickname(req.getParameter("nickname"));
+        user.setEmail(req.getParameter("email"));
+        user.setVerifycode(req.getParameter("valistr").toLowerCase());
+        user.setVerifycode1(String.valueOf(req.getSession().getAttribute("verifyCode")).toLowerCase());
 
         // 回显页面
         resp.setCharacterEncoding(config.ENCODE);
@@ -82,47 +77,47 @@ public class register extends HttpServlet {
         writer.write("<h1>注册信息如下</h1>");
 
         // 判断注册信息
-        if (username==null || "".equals(username)) {
+        if (user.getUsername()==null || "".equals(user.getUsername())) {
             writer.write("<h5>用户名不能为空</h5>");
             valid = false;
         } else {
-            writer.write("<h5>用户名：" + username + "</h5>");
+            writer.write("<h5>用户名：" + user.getUsername() + "</h5>");
         }
-        if (psw==null || psw1==null || "".equals(psw) || "".equals(psw1)) {
+        if (user.getPsw()==null || user.getPsw1()==null || "".equals(user.getPsw()) || "".equals(user.getPsw1())) {
             writer.write("<h5>密码不能为空</h5>");
             valid = false;
-        } else if (!psw.equals(psw1)) {
+        } else if (!user.getPsw().equals(user.getPsw1())) {
             writer.write("<h5>两次输入的密码不同</h5>");
         }
-        if (nickname==null || "".equals(nickname)) {
+        if (user.getNickname()==null || "".equals(user.getNickname())) {
             writer.write("<h5>Nickname不能为空</h5>");
             valid = false;
         } else {
-            writer.write("<h5>你填写的Nickname：" + nickname);
+            writer.write("<h5>你填写的Nickname：" + user.getNickname());
         }
-        if (email==null || "".equals(email)) {
+        if (user.getEmail()==null || "".equals(user.getEmail())) {
             writer.write("<h5>email不能为空</h5>");
             valid = false;
         } else {
-            writer.write("<h5>Email：" + email + "</h5>");
+            writer.write("<h5>Email：" + user.getEmail() + "</h5>");
         }
-        if (verifycode==null || "".equals(verifycode)) {
+        if (user.getVerifycode()==null || "".equals(user.getVerifycode())) {
             writer.write("<h5>验证码不能为空</h5>");
             valid = false;
-        } else if (!verifycode1.equals(verifycode)) {
+        } else if (!user.getVerifycode1().equals(user.getVerifycode())) {
             writer.write("<h5>验证码验证失败</h5>");
             valid = false;
         }
 
         if (valid) {
-            if (db.select(username)) {
+            if (db.select(user.getUsername())) {
                 ResultSet res = db.getResult();
                 try {
                     if (res.next()) {
                         writer.write("<h1>该用户名已被注册，请重新输入用户名</h1>");
                         resp.setHeader("refresh", "3;url=/LearnWeb/regist/regist.jsp");
                     } else {
-                        db.add(username,psw,nickname,email);
+                        db.add(user);
                         resp.setHeader("refresh", "3;url=/LearnWeb/login/login.jsp");
                     }
                 } catch (SQLException e) {

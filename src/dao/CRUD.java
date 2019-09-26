@@ -1,6 +1,7 @@
 package dao;
 
 import com.sun.istack.internal.NotNull;
+import model.RegistUser;
 
 import java.sql.*;
 import java.util.UUID;
@@ -75,15 +76,15 @@ public class CRUD {
         }
     }
 
-    public boolean add(@NotNull String User_name, @NotNull String passsword, @NotNull String nickname, @NotNull String email) {
+    public boolean add(@NotNull RegistUser user) {
         try {
             String sql = "insert into user(username,password,nickname,email) values(?,?,?,?)";
 
             statement = connection.prepareStatement(sql);
-            statement.setString(1, User_name);
-            statement.setString(2, passsword);
-            statement.setString(3, nickname);
-            statement.setString(4, email);
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getPsw());
+            statement.setString(3, user.getNickname());
+            statement.setString(4, user.getEmail());
 
             statement.executeUpdate();
 
@@ -152,12 +153,12 @@ public class CRUD {
                 e.printStackTrace();
             }
 
-            System.out.println("---------ADD---------");
-            if (lesson1.add("沃克","Spurs", "Walker", "123@qq.com")) {
-                System.out.println("Add success!");
-            } else {
-                System.out.println("Add fail!");
-            }
+//            System.out.println("---------ADD---------");
+//            if (lesson1.add("沃克","Spurs", "Walker", "123@qq.com")) {
+//                System.out.println("Add success!");
+//            } else {
+//                System.out.println("Add fail!");
+//            }
 
             System.out.println("----------Update---------");
             if (lesson1.update("沃克", "San Antonio Spurs")) {

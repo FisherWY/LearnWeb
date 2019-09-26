@@ -13,6 +13,9 @@ public class User {
     private String email;
     private String verifycode;
 
+    public User() {
+    }
+
     public User(String username, String psw, String nickname, String email, String verifycode) {
         this.username = username;
         this.psw = psw;

@@ -8,13 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ab4cb9cd-fb15-4b88-a5b1-f8b7b710388c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CRUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/regist/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regist/register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/META-INF/LearnWeb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/head/_head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/head/_head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/regist/regist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/regist/regist.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +45,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1RKVq9GfEm6U0dfybd7g1Q3odxq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -266,6 +270,8 @@
       <workItem from="1569239249290" duration="4620000" />
       <workItem from="1569415973018" duration="1230000" />
       <workItem from="1569418518786" duration="2602000" />
+      <workItem from="1569458726350" duration="1306000" />
+      <workItem from="1569461575283" duration="1614000" />
     </task>
     <servers />
   </component>

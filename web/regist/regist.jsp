@@ -6,15 +6,16 @@
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" href="css/regist.css"/>
 	</head>
+	<%-- 防止重复提交 --%>
+	<%
+		Random random = new Random();
+		int token = random.nextInt();
+		session.setAttribute("token", token);
+	%>
 	<body>
 		<form action="/LearnWeb/register" method="POST">
-			<%-- 防止重复提交 --%>
-			<%
-				Random random = new Random();
-				int token = random.nextInt();
-				session.setAttribute("token", token);
-			%>
-				<input type="hidden" name="token" value="<%=token%>">
+			<%-- 用于鉴别重复提交的token --%>
+			<input type="hidden" name="token" value="<%=token%>">
 			<h1>欢迎注册EasyMall</h1>
 			<table>
 				<tr>

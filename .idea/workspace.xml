@@ -8,15 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ab4cb9cd-fb15-4b88-a5b1-f8b7b710388c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/regist/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regist/register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/regist/regist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/regist/regist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/head/_head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/head/_head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/prodlist/prod_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/prodlist/prod_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,8 +84,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
-    <configuration name="CRUD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.CRUD" />
+    <configuration name="userDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dao.userDao" />
       <module name="LearnWeb" />
       <extension name="coverage">
         <pattern>
@@ -244,12 +243,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CRUD" />
+      <item itemvalue="Application.userDao" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CRUD" />
+        <item itemvalue="Application.userDao" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +271,8 @@
       <workItem from="1569418518786" duration="2602000" />
       <workItem from="1569458726350" duration="1306000" />
       <workItem from="1569461575283" duration="1614000" />
+      <workItem from="1569545581212" duration="891000" />
+      <workItem from="1569718369392" duration="4121000" />
     </task>
     <servers />
   </component>

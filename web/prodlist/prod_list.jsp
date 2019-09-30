@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page import="model.Product" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -18,8 +19,30 @@
 			</form>
 		</div>
 		<div id="prod_content">
+			<%
+
+			%>
+			<c:forEach items="${productList}" var="product">
+				<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
+					<img src="${product.imgurl}">
+					<div id="prod_name_div">
+						${product.name}
+					</div>
+					<div id="prod_price_div">
+						￥${product.price}
+					</div>
+					<div>
+						<div id="gotocart_div">
+							<a href="../cart/cart.jsp">加入购物车</a>
+						</div>
+						<div id="say_div">
+							${product.pnum}
+						</div>
+					</div>
+				</div>
+			</c:forEach>
 			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
+				<img src="img/prodlist/prod.jpg">
 				<div id="prod_name_div">
 					华为荣耀6plus
 				</div>
@@ -28,167 +51,13 @@
 				</div>
 				<div>
 					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
+						<a href="../cart/cart.jsp">加入购物车</a>
+					</div>
 					<div id="say_div">
 						133人评价
-					</div>					
+					</div>
 				</div>
 			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" style="margin-right: 0px;" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div class="prod_div" style="margin-right: 0px;" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg"></img>
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="#">加入购物车</a>
-					</div>					
-					<div id="say_div">
-						133人评价
-					</div>					
-				</div>
-			</div>
-			<div style="clear: both"></div>
 		</div>
 	</div>
 	<%@ include file="../foot/_foot.jsp" %>

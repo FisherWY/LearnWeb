@@ -1,6 +1,6 @@
 package login;
 
-import dao.CRUD;
+import dao.userDao;
 import model.User;
 import preference.config;
 
@@ -23,12 +23,18 @@ import java.sql.SQLException;
 @WebServlet("/login")
 public class login extends HttpServlet {
 
-    private CRUD db = new CRUD();
+    private userDao db = new userDao();
 
     @Override
     public void init() throws ServletException {
         super.init();
         db.init();
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
+        db.release();
     }
 
     @Override

@@ -1,6 +1,6 @@
 package regist;
 
-import dao.CRUD;
+import dao.userDao;
 import model.RegistUser;
 import preference.config;
 
@@ -25,7 +25,7 @@ public class register extends HttpServlet {
     private RegistUser user = new RegistUser();
     private boolean valid = true;
 
-    private CRUD db = new CRUD();
+    private userDao db = new userDao();
 
     @Override
     public void init() throws ServletException {

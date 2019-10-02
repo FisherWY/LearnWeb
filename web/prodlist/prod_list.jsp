@@ -19,12 +19,9 @@
 			</form>
 		</div>
 		<div id="prod_content">
-			<%
-
-			%>
 			<c:forEach items="${productList}" var="product">
 				<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-					<img src="${product.imgurl}">
+					<img src="/LearnWeb/getProdImg?imgurl=${product.imgurl}">
 					<div id="prod_name_div">
 						${product.name}
 					</div>

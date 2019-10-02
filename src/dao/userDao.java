@@ -134,48 +134,4 @@ public class userDao {
         return result;
     }
 
-    public static void main(String[] args) {
-        userDao lesson1 = new userDao();
-
-        if (lesson1.init()) {
-            System.out.println("--------Select-------");
-            lesson1.select("admin");
-            ResultSet resultSet = lesson1.getResult();
-            try {
-                while (resultSet.next()) {
-                    System.out.println("UUID: " + resultSet.getString(1));
-                    System.out.println("User Name: " + resultSet.getString(2));
-                    System.out.println("Nickname: " + resultSet.getString(3));
-                    System.out.println("Email: " + resultSet.getString(4));
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-//            System.out.println("---------ADD---------");
-//            if (lesson1.add("沃克","Spurs", "Walker", "123@qq.com")) {
-//                System.out.println("Add success!");
-//            } else {
-//                System.out.println("Add fail!");
-//            }
-
-            System.out.println("----------Update---------");
-            if (lesson1.update("沃克", "San Antonio Spurs")) {
-                System.out.println("Update success!");
-            } else {
-                System.out.println("Update fail!");
-            }
-
-//            System.out.println("----------Delete----------");
-//            if (lesson1.delete("沃克")) {
-//                System.out.println("Delete success!");
-//            } else {
-//                System.out.println("Delete fail!");
-//            }
-
-        }
-
-        lesson1.release();
-    }
-
 }

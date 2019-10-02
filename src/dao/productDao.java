@@ -1,5 +1,7 @@
 package dao;
 
+import com.sun.istack.internal.NotNull;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -68,6 +70,25 @@ public class productDao {
             statement = connection.prepareStatement(sql);
 
             result = statement.executeQuery();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean search(@NotNull String name, @NotNull String category, @NotNull double minPrice, @NotNull double maxPrice) {
+        try {
+            String sql = "select * from products where name like %?% and category like %?% and price >=? and price <=?";
+
+            statement = connection.prepareStatement(sql);
+            statement.setString(1, name);
+            statement.setString(2, category);
+            statement.setDouble(3, minPrice);
+            statement.setDouble(4, maxPrice);
+
+            result = statement.executeQuery();
+
             return true;
         } catch (Exception e) {
             e.printStackTrace();

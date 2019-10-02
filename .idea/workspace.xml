@@ -8,13 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab4cb9cd-fb15-4b88-a5b1-f8b7b710388c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/userDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/regist/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regist/register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/CRUD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/login/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/regist/register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/head/_head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/head/_head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/productDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/productDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prodlist/getProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prodlist/getProductList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/prodlist/prod_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/prodlist/prod_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -273,6 +269,8 @@
       <workItem from="1569461575283" duration="1614000" />
       <workItem from="1569545581212" duration="891000" />
       <workItem from="1569718369392" duration="4121000" />
+      <workItem from="1569830266487" duration="1667000" />
+      <workItem from="1569984601958" duration="2175000" />
     </task>
     <servers />
   </component>

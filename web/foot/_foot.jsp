@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="../foot/css/foot.css"/>
+<link rel="stylesheet" href="/LearnWeb/foot/css/foot.css"/>
 <div id="common_foot">
 	<p>
 		Copyright © 2011-2015 达内软件技术有限公司 版权所有 保留一切权利 苏B2-20130048号 | 京ICP备09062682号-9

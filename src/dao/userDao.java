@@ -13,7 +13,7 @@ import java.sql.*;
 
 public class userDao {
 
-    public String serverURL = "jdbc:mysql://192.168.199.241:3306/";
+    public String serverURL = "jdbc:mysql://192.168.1.3:3306/";
     public String database = "easymall";
     public String serverTimeZone = "?serverTimezone=UTC";
 

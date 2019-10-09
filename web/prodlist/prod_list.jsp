@@ -1,10 +1,11 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="model.Product" %>
 <!DOCTYPE HTML>
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	<link href="css/prodList.css" rel="stylesheet" type="text/css">
+	<link href="/LearnWeb/prodlist/css/prodList.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
 		</div>
 		<div id="prod_content">
 			<c:forEach items="${productList}" var="product">
-				<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
+				<div class="prod_div" onclick="window.location.href='/LearnWeb/getProdinfo?pid=${product.id}'">
 					<img src="/LearnWeb/getProdImg?imgurl=${product.imgurl}">
 					<div id="prod_name_div">
 						${product.name}
@@ -30,7 +31,7 @@
 					</div>
 					<div>
 						<div id="gotocart_div">
-							<a href="../cart/cart.jsp">加入购物车</a>
+							<a href="/LearnWeb/addTocart?pid=${product.id}&buyNum=1">加入购物车</a>
 						</div>
 						<div id="say_div">
 							${product.pnum}
@@ -38,23 +39,8 @@
 					</div>
 				</div>
 			</c:forEach>
-			<div class="prod_div" onclick="window.location.href='../prodinfo/prod_info.jsp'">
-				<img src="img/prodlist/prod.jpg">
-				<div id="prod_name_div">
-					华为荣耀6plus
-				</div>
-				<div id="prod_price_div">
-					￥2099元
-				</div>
-				<div>
-					<div id="gotocart_div">
-						<a href="../cart/cart.jsp">加入购物车</a>
-					</div>
-					<div id="say_div">
-						133人评价
-					</div>
-				</div>
-			</div>
+
+			<div style="clear: both"></div>
 		</div>
 	</div>
 	<%@ include file="../foot/_foot.jsp" %>

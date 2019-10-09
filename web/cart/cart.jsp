@@ -1,9 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-		<link href="css/cart.css" rel="stylesheet" type="text/css">
+		<link href="/LearnWeb/cart/css/cart.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 	
@@ -23,23 +24,28 @@
 			</ul>
 
 			<!-- 购物信息 -->
-			<ul class="prods">
-				<li>
-					<input type="checkbox" class="prodC"/> 
-				</li>
-				<li class="li_prod">
-					<img src="img/cart/prod.jpg" width="90" height="90" class="prodimg" />
-					<span class="prodname">荣耀6plus</span>
-				</li>
-				<li class="li_price">1999</li>
-				<li>
-					<a href="javascript:void(0)" class="delNum" >-</a>
-					<input class="buyNumInp" type="text" readonly="readonly" value="1" />
-					<a href="javascript:void(0)" class="addNum" >+</a>
-				</li>
-				<li class="sum_price">1999</li>
-				<li><a id="" class="delProd" href="javascript:void(0)">删除</a></li>
-			</ul>
+			<c:set var="totalMoney" value="0"></c:set>
+			<c:forEach items="${cartmap}" var="entry">
+				<ul class="prods">
+					<li>
+						<input type="checkbox" class="prodC"/>
+					</li>
+					<li class="li_prod">
+						<img src="/LearnWeb/getProdImg?imgurl=${entry.key.imgurl}" width="90" height="90" class="prodimg" />
+						<span class="prodname">${entry.key.name}</span>
+					</li>
+					<li class="li_price">${entry.key.price}</li>
+					<li>
+						<a href="javascript:void(0)" class="delNum" >-</a>
+						<input id="${entry.key.id}" class="buyNumInp" type="text" readonly="readonly" value="${entry.value}" />
+						<a href="javascript:void(0)" class="addNum" >+</a>
+					</li>
+					<li class="sum_price">${entry.key.price * entry.value}</li>
+					<li><a id="" class="delProd" href="javascript:void(0)">删除</a></li>
+				</ul>
+				<c:set var="totalMoney" value="${totalMoney + entry.key.price * entry.value}"></c:set>
+			</c:forEach>
+
 			<!-- 总计条 -->
 			<div id="total">
 				<div id="total_1">
@@ -49,7 +55,7 @@
 					<div id="div_sum">
 						<span id="span_1">总价：</span>
 						<span>￥</span>
-						<span id="span_2" class="total_sum_price">199</span>&nbsp;&nbsp;&nbsp;
+						<span id="span_2" class="total_sum_price">${totalMoney}</span>&nbsp;&nbsp;&nbsp;
 					</div>
 				</div>
 				<div id="total_2">	

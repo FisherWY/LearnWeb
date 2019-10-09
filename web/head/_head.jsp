@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ page import="model.User" %>
 <!DOCTYPE HTML>
-<link rel="stylesheet" href="../head/css/head.css"/>
+<link rel="stylesheet" href="/LearnWeb/head/css/head.css"/>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 
 <div id="common_head">
@@ -24,19 +24,19 @@
 		</div>
 	</div>
 	<div id="line2">
-		<img id="logo" src="../head/img/head/logo.jpg"/>
+		<img id="logo" src="/LearnWeb/head/img/head/logo.jpg"/>
 		<input type="text" name=""/>
 		<input type="button" value="搜 索"/>
 		<span id="goto">
-			<a id="goto_order" href="../orderlist/order_list.jsp">我的订单</a>
-			<a id="goto_cart" href="../cart/cart.jsp">我的购物车</a>
+			<a id="goto_order" href="/LearnWeb/orderlist/order_list.jsp">我的订单</a>
+			<a id="goto_cart" href="/LearnWeb/cart/cart.jsp">我的购物车</a>
 		</span>
-		<img id="erwm" src="../head/img/head/qr.jpg"/>
+		<img id="erwm" src="/LearnWeb/head/img/head/qr.jpg"/>
 	</div>
 	<div id="line3">
 		<div id="content">
 			<ul>
-				<li><a href="../index/index.jsp">首页</a></li>
+				<li><a href="/LearnWeb/index/index.jsp">首页</a></li>
 				<li><a href="/LearnWeb/getProdlist">全部商品</a></li>
 				<li><a href="#">手机数码</a></li>
 				<li><a href="#">电脑平板</a></li>

@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 
 public class productDao {
 
-    public String serverURL = "jdbc:mysql://10.252.4.131:8849/";
+    public String serverURL = "jdbc:mysql://192.168.1.3:3306/";
     public String database = "easymall";
     public String serverTimeZone = "?serverTimezone=UTC";
 
@@ -86,6 +86,22 @@ public class productDao {
             statement.setString(2, category);
             statement.setDouble(3, minPrice);
             statement.setDouble(4, maxPrice);
+
+            result = statement.executeQuery();
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean getProductInfo(@NotNull String id) {
+        try {
+            String sql = "select * from products where id=?";
+
+            statement = connection.prepareStatement(sql);
+            statement.setString(1, id);
 
             result = statement.executeQuery();
 

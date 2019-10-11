@@ -5,6 +5,70 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 		<link href="/LearnWeb/cart/css/cart.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/LearnWeb/cart/js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function () {
+				$(".delNum").click(function () {
+					var buyNumInput = $(this).siblings("input");
+					var buyNum = buyNumInput.val();
+					if (buyNum > 1) {
+						buyNum -= 1;
+						buyNumInput.val(buyNum);
+						var pid = buyNumInput.attr("id");
+						$.post("${app}/updateBuyNum", {
+							"pid": pid,
+							"buyNum": buyNum
+						})
+					}
+
+					totalMoney(this, buyNum)
+				});
+
+				$(".addNum").click(function () {
+					var buyNumInput = $(this).siblings("input");
+					var buyNum = buyNumInput.val() + 1;
+					buyNumInput.val(buyNum);
+					var pid = buyNumInput.attr("id");
+					$.post("${app}/updateBuyNum", {
+						"pid": pid,
+						"buyNum": buyNum
+					})
+
+					totalMoney(this, buyNum)
+				});
+
+				$(".delProd").click(function () {
+					var pid = $(this).attr("id");
+
+					$.post("${app}/updateBuyNum", {
+						"pid": pid,
+						"butNum": -1
+					})
+
+					$(this).parents("ul").remove()
+					// 计算所有商品总价
+					var totalMoney = 0;
+					${".sum_price"}.each(function () {
+						totalMoney += parseFloat($(this).text())
+					})
+					$("#span_2").text(totalMoney);
+				});
+
+				function totalMoney(obj, buyNum) {
+					// 计算当前商品总价
+					var price = ${obj}.parents("ul").find(".li_price").text();
+					var prod_sum = price * buyNum;
+					${obj}.parents("ul").find(".sum_price").text(prod_sum);
+
+					// 计算所有商品总价
+					var totalMoney = 0;
+					${".sum_price"}.each(function () {
+						totalMoney += parseFloat($(this).text())
+					})
+					$("#span_2").text(totalMoney);
+				}
+			});
+		</script>
 	</head>
 	<body>
 	

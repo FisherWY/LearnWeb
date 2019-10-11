@@ -1,6 +1,7 @@
 package dao;
 
 import com.sun.istack.internal.NotNull;
+import preference.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,12 +15,12 @@ import java.sql.ResultSet;
 
 public class productDao {
 
-    public String serverURL = "jdbc:mysql://192.168.1.3:3306/";
-    public String database = "easymall";
-    public String serverTimeZone = "?serverTimezone=UTC";
+    public String serverURL = config.DB_URL;
+    public String database = config.DB_NAME;
+    public String serverTimeZone = config.DB_TIMEZONE;
 
-    private String username = "fisher";
-    private String password = "12345678";
+    private String username = config.DB_USERNAME;
+    private String password = config.DB_PASSWORD;
 
     private Connection connection = null;
     private PreparedStatement statement = null;
@@ -28,7 +29,7 @@ public class productDao {
     public boolean init() {
         try {
             // 加载驱动
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(config.DB_DRIVER);
             // 建立连接
             connection = DriverManager.getConnection(serverURL+database+serverTimeZone, username, password);
             // 返回连接情况

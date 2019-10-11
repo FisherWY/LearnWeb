@@ -13,8 +13,6 @@ import java.util.HashMap;
 
 public class cartSessionListener implements HttpSessionListener {
 
-    private HashMap<Product, Integer> cartMap = new HashMap<>();
-
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
         httpSessionEvent.getSession().setAttribute("cartmap", new HashMap<Product, Integer>());

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" href="/LearnWeb/index/css/index.css"/>
 		<title>欢迎光临EasyMall</title>
 	</head>
 	<body>

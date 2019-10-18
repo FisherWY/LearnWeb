@@ -10,17 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/productDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/productDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/userDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/listener/cartSessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/cartSessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/preference/config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/preference/config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/cart/addToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/cart/addToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/productDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/productDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/dao/userDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/dao/userDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/listener/cartSessionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/listener/cartSessionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/preference/config.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/preference/config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/cart/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/cart/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/head/_head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/head/_head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/orderadd/order_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/orderadd/order_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/orderlist/order_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/orderlist/order_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -289,6 +285,7 @@
       <workItem from="1569984601958" duration="2661000" />
       <workItem from="1570616592318" duration="9337000" />
       <workItem from="1570755243306" duration="5759000" />
+      <workItem from="1571359338669" duration="6665000" />
     </task>
     <servers />
   </component>

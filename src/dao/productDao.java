@@ -1,6 +1,7 @@
 package dao;
 
 import com.sun.istack.internal.NotNull;
+import model.Product;
 import preference.config;
 
 import java.sql.Connection;
@@ -57,7 +58,6 @@ public class productDao {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
     }
 
     public ResultSet getResult() {

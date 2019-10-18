@@ -7,6 +7,7 @@ package model;
 
 public class User {
 
+    private int id;
     private String username;
     private String psw;
     private String nickname;
@@ -62,5 +63,13 @@ public class User {
 
     public void setVerifycode(String verifycode) {
         this.verifycode = verifycode;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

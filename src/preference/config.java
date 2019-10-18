@@ -13,7 +13,7 @@ public class config {
 
     public static final String DB_DRIVER="com.mysql.cj.jdbc.Driver";
 
-    public static final String DB_URL="jdbc:mysql://192.168.1.3:3306/";
+    public static final String DB_URL="jdbc:mysql://192.168.1.2:3306/";
 
     public static final String DB_NAME="easymall";
 

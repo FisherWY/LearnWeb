@@ -72,11 +72,13 @@ public class login extends HttpServlet {
 
         if (db.select(user.getUsername())) {
             ResultSet res = db.getResult();
+            int id = 0;
             String auth = null;
             String nickname = null;
             String email = null;
             try {
                 res.next();
+                id = res.getInt(1);
                 auth = res.getString(3);
                 nickname = res.getString(4);
                 email = res.getString(5);
@@ -88,6 +90,7 @@ public class login extends HttpServlet {
             if (psw.equals(auth)) {
                 user.setNickname(nickname);
                 user.setEmail(email);
+                user.setId(id);
                 req.getSession().setAttribute("user", user);
 
                 writer.write("<h1>登录成功，3s后跳转到主页</h1>");
